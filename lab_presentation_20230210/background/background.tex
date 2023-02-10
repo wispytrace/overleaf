@@ -1,0 +1,214 @@
+%\usepackage[width=2cm,dark,tab]{beamerthemesidebar}
+%\usepackage{colortbl} % ²ÊÉ«±í¸ñ
+%\usepackage[table]{xcolor}
+%\usepackage{booktabs} % ¿ÉÒÔÊ¹ÓÃÈýÏß±í
+%\usepackage{multirow} % ¸´ÔÓ±í¸ñ£¬Ê¹ÓÃmultirow±ØÐë¼ÓÔØ¸Ãpackage
+%\usepackage{dcolumn}
+\usepackage{graphicx,subfigure,boxedminipage}
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+% or whatever
+\usepackage{CJK}
+\usepackage[latin1]{inputenc}
+% or whatever
+\usepackage{alltt}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{times}
+\usepackage{multimedia}
+\usepackage{color}% [usenames]
+\usepackage{hyperref}
+%\usepackage[T1]{fontenc}
+\graphicspath {{figure/}}%Í¼Æ¬ËùÔÚµÄÄ¿Â¼
+\usepackage{multicol}    %Í¬Ê±Ê¹ÓÃµ¥ÁÐºÍ¶àÁÐ£¬ÈçÏÂ
+\usepackage{multirow}
+%%%\begin{multicols}{2}
+%%%\end{multicols}
+\usepackage{setspace} % µ÷Õû¼ä¾à
+\usepackage{boiboites} % ×Ô¶¨Òå¶¨Àí»·¾³
+\usepackage{textpos} % Ê¹logo²»±»¸²¸Ç
+%\begin{spacing}{1.5}
+%\tableofcontents \listoffigures \listoftables
+%\end{spacing}
+
+\setlength{\columnsep}{-0.05cm} %Ë«À¸Ö®¼äµÄ¼ä¾à
+%\setlength{\parskip}{-0.1\baselineskip} % ÉèÖÃ¶Î¼ä¾à
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ä£°åÄ£Ê½¶¨Òå %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<presentation> {
+  \usetheme{CambridgeUS}   %[hideothersubsections] beamer Ä£°åµÄÄ£Ê½
+  % Warsaw or ...,Antibes,PaloAlto,Darmstadt,Frankfurt,Boadilla,Antibes,Luebeck,CambridgeUS,Rochester
+
+%%  With navigation bar: default, boxes, Bergen, Madrid, Pittsburgh, Rochester
+%%  With a treelike navigation bar: Antibes, JuanLesPins, Montpellier.
+%%  With a TOC sidebar: Berkeley, PaloAlto, Goettingen, Marburg, Hannover
+%%  With a mini frame navigation: Berlin, Ilmenau, Dresden, Darmstadt, Frankfurt, Singapore, Szeged
+%%  With section and subsection titles: Copenhagen, Luebeck, Malmoe, Warsaw
+
+%% Latex ÉèÖÃ×ÖÌå´óÐ¡ÃüÁîÓÉÐ¡µ½´óÒÀ´ÎÎª£º\tiny \scriptsize \footnotesize \small \normalsize \large \Large \LARGE \huge \Huge
+%\definecolor{logo_color}{rgb}{191,22,94}
+
+%  \usefonttheme[onlylarge]{structuresmallcapsserif}%
+%  \usefonttheme[onlysmall]{structurebold}%
+%  \usefonttheme{serif} % Times New Rome ×ÖÌå
+  \usecolortheme{dolphin} % default¶¨Òå×óÉÏÌõ¿ò
+  \usecolortheme[RGB={191,22,94}]{structure}
+%% Inner color themes, ÆäËûÑ¡Ôñ: orchid,albatross,beaver,beetle,default,crane,dolphin,dove,fly,orchid,lily,rose,seagull,seahorse
+%% Inner color themes, ÆäËûÑ¡Ôñ: sidebartab,whale,wolverine
+
+  \useinnertheme{rectangles} % default,circles,margin,rounded,rectangles
+%%  \useoutertheme{split} % default£¬infolines£¬miniframes,shadow,smoothbars,smoothtree,tree,sidebar
+
+%  \useoutertheme[height=0.1\textwidth,width=0.15\textwidth,hideothersubsections]{sidebar}
+  \setbeamercovered{transparent} % dynamic,transparent,invisible
+  % or whatever (possibly just delete it)
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ÑÕÉ«¶¨Òå %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% beamerÖÐÒÑ¾­¶¨ÒåµÄÑÕÉ«£º
+%% red,green,blue,cyan,magenty,yellow,black,darkgray,gray,lightgray,orange,violet,purple,brown
+
+%% ×Ô¶¨ÒåÑÕÉ«£º
+%% \xdefinecolor{lanvendar}{rgb}{0.8,0.6,1}
+%% \xdefinecolor{olive}{cmyk}{0.64,0,0.95,0.4}
+ %\colorlet{structure}{blue!60!black}
+% \colorlet{structure}{blue!85!white}      %  ×Ô¶¨ÒåÑÕÉ«,ÓÃ"structure"±íÊ¾ 60%À¶É«+40%ºÚÉ«µÄÑÕÉ«
+
+%\setbeamertemplate{background canvas}[vertical shading][bottom=white,top=structure.fg!25] %%±³¾°É«, ÉÏ25%µÄÀ¶, ¹ý¶Éµ½ÏÂ°×.
+%\beamertemplateshadingbackground{white}{blue!25} %ÉèÖÃ½¥±ä(gradient)±³¾°É«,
+%\beamersetaveragebackground{yellow!25} % ÉèÖÃµ¥Ò»µÄ(solid)±³¾°É«
+%\beamertemplategridbackground[0.3cm] % ÉèÖÃÕ¤¸ñ(grid ) ±³¾°
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ÏÔÊ¾ÉèÖÃ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\hilite<#1>{\temporal<#1>{\color{white!80!black}}{\color{black}}{\color{white!50!black}}}% magenta
+%% ×Ô¶¨ÒåÃüÁî, Ô´×Ô beamer_guide. item Öð²½ÏÔÊ¾Ê±, Ê¹½«Òª³öÏÖµÄitem¡¢ÕýÔÚÏÔÊ¾µÄitem¡¢ÒÑ¾­³öÏÖµÄitem¡¢ ³ÊÏÖ²»Í¬ÑÕÉ«.
+% \hypersetup{pdfpagemode={FullScreen}} % Ä¬ÈÏÈ«ÆÁ²¥·Å
+
+
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ò³ÃæÉèÖÃ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{navigation symbols}{}   %% È¥µôÒ³ÃæÏÂ·½Ä¬ÈÏµÄµ¼º½Ìõ.
+\setcounter{tocdepth}{2} % Ö»Éú³É2¼¶Ä¿Â¼
+\setcounter{secnumdepth}{2}
+\numberwithin{equation}{section} % ¹«Ê½°´ÕÂ±àºÅ
+%\numberwithin{equation}{subsection} % ¹«Ê½°´½Ú±àºÅ
+\numberwithin{figure}{section} % Í¼Æ¬°´ÕÂ±àºÅ
+
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm} %  Á½¶Ë¶ÔÆë
+\raggedright
+
+\setbeamertemplate{caption}[numbered] % Í¼±í±àºÅ
+\setbeamerfont{caption}{size=\footnotesize} %  Í¼±í±êÌâ×ÖÌå´óÐ¡ÉèÖÃ
+
+% µ÷ÕûµÚÒ»Ò³±êÌâÕ¼Î»
+% \defbeamertemplate*{frametitle}{smoothbars theme}
+%  {
+%    \nointerlineskip
+%    \begin{beamercolorbox}[wd=\paperwidth,leftskip=.3cm,rightskip=.3cm plus1fil,vmode]{frametitle}
+%      \vskip.6ex
+%      \usebeamerfont*{frametitle}\insertframetitle%
+%      \vskip.6ex
+%    \end{beamercolorbox}
+%  }
+
+\pgfdeclaremask{cityu_logo}{figure/cityu_logo3}
+\pgfdeclareimage[mask=cityu_logo,height=1cm,interpolate=true]{cityu_logo}{figure/cityu_logo3}
+\addtobeamertemplate{frametitle}{}{%
+%\begin{textblock*}{5cm}(.9\textwidth,-0.85cm)
+\begin{textblock*}{5cm}(.88\textwidth,7cm) %%%µ÷½ÚlogoÔÚpptµÄÎ»ÖÃ
+%\includegraphics[height=1cm,width=1cm]{cityu_logo.pdf}
+%bicong%\pgfuseimage{cityu_logo}
+\end{textblock*}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ×Ô¶¨ÒåÒ³½Å %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usefoottemplate{\hbox{\tinycolouredline{structure!80!black}{
+\color{white}{ \insertshortauthor} \hfill{\insertshortinstitute }
+\hfill{\footnotesize \insertframenumber\,/ \inserttotalframenumber}
+% \hfill{{\the\year}/{\the\month}/{\the\day}}
+}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ÖÐÎÄ×ÖÌå %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\song}{\CJKfamily{song}}
+\newcommand{\hei}{\CJKfamily{hei}}
+\newcommand{\kai}{\CJKfamily{kai}}
+\newcommand{\fs}{\CJKfamily{fs}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ÖÐÎÄ¶¨Àí»·¾³ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newtheorem{theo}{{¶¨Àí}} % \begin{theo}  \end{theo}
+%\newtheorem{prop}{{ÃüÌâ}}
+%\newtheorem{lem}{{ÒýÀí}}
+%\newtheorem{corol}{{ÍÆÂÛ}}[theorem]
+%\newtheorem{def}{{¶¨Òå}}
+%\newtheorem{exam}{{Àý}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ¶¨ÀíÃüÌâ±àºÅ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{theorems}[numbered]
+%\newtheorem{exam}{Example}[section] % °´ÕÂ±àºÅ
+\newboxedtheorem[background=lightgray]{exam}{Example}{section}
+
+\newtheorem{coro}{Corollary}[section]
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{exm}{Example}[section]
+\newtheorem{rem}{Remark}[section]
+\newtheorem{defi}{Definition}[section]
+\newtheorem{prop}{Proposition}[section]
+
+\newtheorem*{refer}{\vspace{-10pt}}
+\newtheorem*{con}{Conclusion}
+\newtheorem*{fw}{Future Work}
+\newtheorem*{spo}{Sponsors}
+
+\newcommand{\EQ}{\begin{eqnarray}}
+\newcommand{\EN}{\end{eqnarray}}
+\newcommand{\EQQ}{\begin{eqnarray*}}
+\newcommand{\ENN}{\end{eqnarray*}}
+\newcommand{\BM}{\left[\begin{array}}
+\newcommand{\EM}{\end{array}\right]}
+\newcommand{\upcite}[1]{$^{\mbox{\scriptsize \cite{#1}}}$}
+
+
+
+\newcommand{\nnum}{\nonumber}
+\newcommand{\ebox}{\hfill \rule{1.5mm}{1.5mm}}
+
+\def \T{{\mbox{\tiny T}}}
+\def \R{{\mbox{\tiny R}}}
+\def \RR{{\mathbb{R}}}
+
+\newcommand{\bdefinition}{\begin{defi} \begin{rm} }
+\newcommand{\edefinition}{ \end{rm}
+\end{defi} }
+\newcommand{\bremark}{\begin{rem} \begin{rm} }
+\newcommand{\eremark}{ \end{rm}
+\end{rem} }
+\newcommand{\btheorem}{\begin{thm}  \begin{rm} }
+\newcommand{\etheorem}{ \end{rm}
+\end{thm} }
+\newcommand{\blemma}{\begin{lem} \begin{rm} }
+\newcommand{\elemma}{ \end{rm}
+\end{lem} }
+\newcommand{\bcorollary}{\begin{coro} \begin{rm} }
+\newcommand{\ecorollary}{ \end{rm}
+\end{coro} }
+\newcommand{\bproposition}{\begin{prop} \begin{rm} }
+\newcommand{\eproposition}{ \end{rm}
+\end{prop} }
+
+\newcommand{\breference}{\begin{refer} \begin{rm} }
+\newcommand{\ereference}{ \end{rm}
+\end{refer} }
+
+\newcommand{\bconclusion}{\begin{con} \begin{rm} }
+\newcommand{\econclusion}{ \end{rm}
+\end{con} }
+
+\newcommand{\bfw}{\begin{fw} \begin{rm} }
+\newcommand{\efw}{ \end{rm}
+\end{fw} }
+
+\newcommand{\bspo}{\begin{spo} \begin{rm} }
+\newcommand{\espo}{ \end{rm}
+\end{spo} } 

@@ -1,0 +1,61 @@
+\documentclass[table,CJK,mathserif,notheorem,10pt]{beamer}% notheorems,
+
+\usepackage{units}
+\usepackage{float}
+\providecommand{\tabularnewline}{\\}
+\usepackage{colortbl}
+\usepackage{graphicx} 
+\usepackage{booktabs} % 导入三线表需要的宏包
+\usepackage{multirow} 
+\definecolor{mygray}{gray}{.8}
+\definecolor{mycyan}{cmyk}{.3,0,0,0}
+\usepackage{diagbox}
+
+
+\include{background/background}
+
+
+\large
+\title[My Title]{Overview on Noncooperative Games and Distributed Nash Equilibrium Seeking over Multi-Agent Networks}
+
+\author[]{PhD Student: Binghao OuYang \\ \vspace{1em} Supervisor: Prof. FENG, Gang, Prof. WANG, Yong}
+
+\institute[Department of Biomedical Engineering, City University of Hong Kong]{Department of Biomedical Engineering\\ City University of Hong Kong}
+
+\date{\scriptsize{February 10, 2023}}
+
+\begin{document}
+
+\begin{CJK}{GBK}{kai}
+
+\begin{frame}
+\begin{figure}
+\begin{center}
+\includegraphics[height=2cm]{figure/cityu_logo2}
+\end{center}                                 
+\end{figure}
+  \titlepage
+
+\end{frame}
+
+\AtBeginSection[] {
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\include{data/ch01}
+\include{data/ch02}
+\include{data/ch03}
+\include{data/ch04}
+
+\include{data/ack}
+
+
+\end{CJK}
+\end{document}
